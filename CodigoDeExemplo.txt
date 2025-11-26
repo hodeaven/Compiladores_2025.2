@@ -1,0 +1,33 @@
+int varA = 10;
+int varB = 2;
+
+funcao int funcPegarValor(int varAux){
+    return varAux;
+}
+
+if(varA > varB){
+    int varA = funcPegarValor(varB);
+} else{
+    int varB = funcPegarValor(varA);
+}
+
+int varSoma = varA + varB;
+
+procedimento procImprimirDobro(int varA){
+    int varDobro = varA * 2;
+    print varDobro; 
+}
+
+bool varPrintar = true;
+
+procImprimirDobro(varSoma);
+
+funcao int funcCalcular(int var1, int var2){
+    int varResultado = var1 + 1 * 10 / 2;
+    while(var1 < var2){
+        int varResultado = 1 + varResultado * 3;
+    }  
+    return varResultado;
+}
+
+int varCalculo = funcCalcular(var1, var2);
