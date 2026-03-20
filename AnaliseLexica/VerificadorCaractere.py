@@ -9,24 +9,24 @@ caracteres = [
     "=", "!", "+", "-", "*", "/", ","
 ]
 
-def getOperadoresLogicos():
+def getOperadoresRelacionais():
     return [">=", ">", "<", "<=", "!=", "=="]
 
 def getOperadoresAritmeticos():
     return ["+", "-", "*", "/"]
 
 
-#Funções de verificação de caracteres 
+#################### Funcoes de verificacao de caracteres ####################
 
 # Indica se a linguagem aceita o caractere informado
 def ehCaractereValido(caractere):
     return caractere in caracteres
 
-# Identifica se o caractere encontrado é um espaço ou uma quebra de linha
+# Identifica se o caractere encontrado eh um espaco ou uma quebra de linha
 def ehEspacoOuQuebraDeLinha(caractere):
     return (caractere == " ") or (caractere == "\n")
 
-# Identifica se o lexema é um operador aritmético, uma atribuição ou uma vírgula
+# Identifica se o lexema e um operador aritmetico, uma atribuicao ou uma virgula
 def identificarTipoAritmeticoAtribuicaoOuVirgula(lexema):
     if lexema == "=":
         return "atribuicao"
@@ -37,10 +37,10 @@ def identificarTipoAritmeticoAtribuicaoOuVirgula(lexema):
     elif lexema in getOperadoresAritmeticos():
         return "operadorAritmetico"
 
-# Identifica se o lexema é um operador lógico    
-def identificarTipoOperadorLogico(lexema):
-    if lexema in getOperadoresLogicos():
-        return "operadorLogico"
+# Identifica se o lexema e um operador relacional    
+def identificarTipoOperadorRelacional(lexema):
+    if lexema in getOperadoresRelacionais():
+        return "operadorRelacional"
 
 def ehAritmeticoAtribuicaoOuVirgula(caractere):
     if caractere == "=":
@@ -52,11 +52,11 @@ def ehAritmeticoAtribuicaoOuVirgula(caractere):
 
     return False
 
-# Identifica se é parentese, chave ou ponto e vírgula
+# Identifica se eh parentese, chave ou ponto e virgula
 def ehParenteseChavePontoEVirgula(caractere):
     return caractere in set("(){};")
 
-# Converte o caractere parentese, chave ou ponto e vírgula em uma string
+# Converte o caractere parentese, chave ou ponto em virgula em uma string
 def traduzParenteseChaveOuPontoEVirgula(caractere):
     caracteres = {
         "(": "abreParentese",
@@ -67,7 +67,7 @@ def traduzParenteseChaveOuPontoEVirgula(caractere):
     }
     return caracteres.get(caractere)
 
-# Identifica se é uma atribuição ou um operador lógico aritmético
+# Identifica se eh uma atribuicao ou um operador relacional
 def identificarAritmeticoOuAtribuicao(caractere, proximoCaractere, indice):
     if (caractere == ">") or (caractere == "<"):
         return (indice + 1 if proximoCaractere == '=' else indice)
@@ -76,4 +76,4 @@ def identificarAritmeticoOuAtribuicao(caractere, proximoCaractere, indice):
             return indice + 1
     
     else:
-        return -1 # Não reconheceu
+        return -1 # Nao reconheceu

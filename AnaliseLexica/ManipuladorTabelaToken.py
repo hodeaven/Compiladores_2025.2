@@ -5,15 +5,15 @@ palavrasReservadas = {
     "if": "if",
     "else": "else",
     "int" : "tipo",
-    "bool": "tipo",
+    "boolean": "tipo",
     "funcao": "funcao",
     "return": "return",
     "print": "print",
     "procedimento": "procedimento",
     "break": "auxLaco",
     "continue": "auxLaco",
-    "true": "bool",
-    "false": "bool"
+    "true": "booleano",
+    "false": "booleano"
 }
 
 def verificarToken(lexema, numeroLinha):

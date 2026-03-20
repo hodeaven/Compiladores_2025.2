@@ -1,0 +1,33 @@
+int varA = 10 ;
+int varB = 2 ;
+funcPegarValor:
+BeginFunc;
+return varAux ;
+EndFunc;
+if ( varA > varB ) {
+param varB
+int varC = call funcPegarValor, 1;
+}
+else {
+param varA
+int varD = call funcPegarValor, 1;
+}
+int varSoma = varA + varB ;
+procImprimirDobro:
+BeginProc;
+int varDobro = varA * 2 ;
+print varDobro ;
+EndProc;
+boolean varPrintar = true ;
+param varSoma
+call procImprimirDobro, 1;
+funcCalcular:
+BeginFunc;
+int varResultado = var1 + 1 * 10 / 2 ;
+while ( var1 < var2 ) int varCalculo = 1 + varResultado * 3 ;
+print varCalculo ;
+return varResultado ;
+EndFunc;
+param varB
+param varA
+int varCalculo = call funcCalcular, 2;

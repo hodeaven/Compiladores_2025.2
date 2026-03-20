@@ -6,9 +6,9 @@ funcao int funcPegarValor(int varAux){
 }
 
 if(varA > varB){
-    int varA = funcPegarValor(varB);
+    int varC = funcPegarValor(varB);
 } else{
-    int varB = funcPegarValor(varA);
+    int varD = funcPegarValor(varA);
 }
 
 int varSoma = varA + varB;
@@ -18,16 +18,17 @@ procedimento procImprimirDobro(int varA){
     print varDobro; 
 }
 
-bool varPrintar = true;
+boolean varPrintar = true;
 
 procImprimirDobro(varSoma);
 
 funcao int funcCalcular(int var1, int var2){
     int varResultado = var1 + 1 * 10 / 2;
     while(var1 < var2){
-        int varResultado = 1 + varResultado * 3;
+        int varCalculo = 1 + varResultado * 3;
+        print varCalculo;
     }  
     return varResultado;
 }
 
-int varCalculo = funcCalcular(var1, var2);
+int varCalculo = funcCalcular(varA, varB);
